@@ -12,14 +12,20 @@
 <body>
 
     <div id="app">
+
         <div class="container">
-            <div class="title">
-                <h1>{{ games[activeImage].title }}</h1>
-            </div>
-            <div class="item">
-                <img :src="games[activeImage].image" :alt="games[activeImage].title">
-            </div>
+                <div class="item">
+                    <img :src="games[activeImage].image" :alt="games[activeImage].title">
+                    <div class="text">
+                        <h3>{{games[activeImage].title}}</h3>
+                        <p>{{games[activeImage].text}}</p>
+                    </div>
+                </div>
+                <div class="thumbs">
+                    <img class="thumb" :class="(activeImage == index) ? `active` : ``" v-for="(image, index) in games.image" :src="image" @click="changeImage(index)">
+                </div>
         </div>
+        
     </div>
 
     <!-- vue -->
