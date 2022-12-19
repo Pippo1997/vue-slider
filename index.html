@@ -14,10 +14,10 @@
     <div id="app">
         <div class="container">
             <div class="title">
-                <h1>{{ games.title }}</h1>
+                <h1>{{ games[activeImage].title }}</h1>
             </div>
             <div class="item">
-                <img :src="games.title[activeImage]" :alt="games.title">
+                <img :src="games[activeImage].image" :alt="games[activeImage].title">
             </div>
         </div>
     </div>
