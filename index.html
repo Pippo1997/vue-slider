@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VUE Slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 
@@ -28,6 +29,10 @@
                         <img :src="element.image" alt="thumbnail" @click="changeImage(index)"/>
                     </div>
                 </div>
+        </div>
+        <div class="button">
+            <button class="btn btn-play" @click="startAutoplay"><i class="fa-solid fa-play"></i></button>
+            <button class="btn btn-pause" @click="stopAutoplay"><i class="fa-solid fa-pause"></i></button>
         </div>
         
     </div>

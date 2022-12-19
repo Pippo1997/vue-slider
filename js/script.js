@@ -49,5 +49,14 @@ methods: {
             this.activeImage = this.games.length - 1;
         }
     },
-},
+    startAutoplay(){
+        this.autoplay = setInterval(() =>{
+            this.next()
+        },3000)
+    },
+        stopAutoplay(){
+            clearInterval(this.autoplay);
+            this.autoplay = null;
+    },
+}
 }).mount('#app')
