@@ -22,7 +22,10 @@
                     </div>
                 </div>
                 <div class="thumbs">
-                    <img class="thumb" :class="(activeImage == index) ? `active` : ``" v-for="(image, index) in games.image" :src="image" @click="changeImage(index)">
+                    <div class="prev" @click="prev"></div>
+                    <div class="next" @click="next"></div>
+                    <div class="thumb" :class="(activeImage == index) ? `active` : ``" v-for="(image, index) in games.image" :src="image" @click="changeImage(index)"></div>
+                    <img :src="image" alt="img">
                 </div>
         </div>
         
