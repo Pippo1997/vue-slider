@@ -16,7 +16,9 @@
 
         <div class="container">
                 <div class="item">
-                    <img :src="games[activeImage].image" :alt="games[activeImage].title">
+                    <div class="image" @mouseover="startAutoplay" @mouseleave="stopAutoplay">
+                        <img :src="games[activeImage].image" :alt="games[activeImage].title">
+                    </div>
                     <div class="text">
                         <h3>{{games[activeImage].title}}</h3>
                         <p>{{games[activeImage].text}}</p>

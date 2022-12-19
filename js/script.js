@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
 data() {
     return {
+        autoplay: null,
         activeImage: 0,
         games: [
             {
@@ -52,11 +53,10 @@ methods: {
     startAutoplay(){
         this.autoplay = setInterval(() =>{
             this.next()
-        },3000)
+        },2000)
     },
         stopAutoplay(){
             clearInterval(this.autoplay);
-            this.autoplay = null;
     },
 }
 }).mount('#app')

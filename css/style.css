@@ -11,6 +11,10 @@
     align-items: center;
 }
 
+.image{
+    height:100%;
+}
+
 .item {
     float: left;
     width: 700px;
