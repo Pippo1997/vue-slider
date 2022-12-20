@@ -15,10 +15,8 @@
     <div id="app">
 
         <div class="container">
-                <div class="item">
-                    <div class="image" @mouseover="startAutoplay" @mouseleave="stopAutoplay">
+                <div class="item" @mouseover="stopAutoplay" @mouseleave="startAutoplay">
                         <img :src="games[activeImage].image" :alt="games[activeImage].title">
-                    </div>
                     <div class="text">
                         <h3>{{games[activeImage].title}}</h3>
                         <p>{{games[activeImage].text}}</p>
@@ -28,7 +26,7 @@
                     <div class="prev" @click="prev"></div>
                     <div class="next" @click="next"></div>
                     <div class="thumb" v-for="(element, index) in games" :class="(index === activeImage) ? 'active' : '' ">
-                        <img :src="element.image" alt="thumbnail" @click="changeImage(index)"/>
+                        <img :src="element.image" alt="element.title" @click="changeImage(index)"/>
                     </div>
                 </div>
         </div>

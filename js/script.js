@@ -55,7 +55,7 @@ methods: {
             this.next()
         },2000)
     },
-        stopAutoplay(){
+    stopAutoplay(){
             clearInterval(this.autoplay);
     },
 }
